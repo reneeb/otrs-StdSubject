@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="1.0" init="Config">
+    <ConfigItem Name="Frontend::Output::FilterElementPost###StdSubject" Required="0" Valid="1">
+        <Description Translatable="1">Defines standard subjects for some actions.</Description>
+        <Group>StdSubject</Group>
+        <SubGroup>OutputFilter</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::FilterElementPost::StdSubject</Item>
+                <Item Key="Debug">0</Item>
+                <Item Key="Templates">
+                    <Hash>
+                        <Item Key="AgentTicketNote">1</Item>
+                        <Item Key="AgentTicketPhoneInbound">1</Item>
+                        <Item Key="AgentTicketPhoneOutbound">1</Item>
+                        <Item Key="AgentTicketPhoneCommon">1</Item>
+                        <Item Key="AgentTicketClose">1</Item>
+                        <Item Key="AgentTicketPending">1</Item>
+                        <Item Key="AgentTicketEmailOutbound">1</Item>
+                    </Hash>
+                </Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="StdSubject::Subjects" Required="0" Valid="1">
+        <Description Translatable="1">Defines standard subjects for some actions.</Description>
+        <Group>StdSubject</Group>
+        <SubGroup>OutputFilter</SubGroup>
+        <Setting>
+            <Hash>
+               <Item Key="AgentTicketNote"><![CDATA[<TicketNumber> <Title> - Test]]></Item>
+               <Item Key="AgentTicketPhoneInbound"><![CDATA[<TicketNumber> <Title> - Test]]></Item>
+               <Item Key="AgentTicketPhoneOutbound"><![CDATA[<TicketNumber> <Title> - Test]]></Item>
+               <Item Key="*"><![CDATA[<TicketNumber> <Title> - Test]]></Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+</otrs_config>
