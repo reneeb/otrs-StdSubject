@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
-    <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.33) -->
+    <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.39) -->
     <Name>StdSubject</Name>
-    <Version>5.0.2</Version>
-    <Framework>5.0.x</Framework>
+    <Version>6.0.1</Version>
+    <Framework>6.0.x</Framework>
     <Vendor>Perl-Services.de</Vendor>
     <URL>http://www.perl-services.de</URL>
     <Description Lang="de">Standardbetreffs für verschiedene Aktionen.</Description>
@@ -12,7 +12,7 @@
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Filelist>
         <File Permission="644" Location="Custom/Kernel/Output/HTML/FilterElementPost/StdSubject.pm" />
-        <File Permission="644" Location="Kernel/Config/Files/StdSubject.xml" />
+        <File Permission="644" Location="Kernel/Config/Files/XML/StdSubject.xml" />
         <File Permission="644" Location="Kernel/Language/de_StdSubject.pm" />
         <File Permission="644" Location="Kernel/Language/hu_StdSubject.pm" />
         <File Permission="644" Location="doc/StdSubject.json" />
