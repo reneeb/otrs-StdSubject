@@ -66,7 +66,8 @@ sub Run {
     }xms;
 
     my %Ticket = $TicketObject->TicketGet(
-        TicketID => $TicketID,
+        TicketID      => $TicketID,
+	DynamicFields => 1,
     );
 
     if ( $HasTags ) {
@@ -129,6 +130,10 @@ sub _ReplaceMacros {
     my %TicketData = %{ $Param{Ticket} };
     for my $Field (qw(State Priority)) {
         $TicketData{$Field} = $LanguageObject->Translate( $TicketData{$Field} );
+    }
+
+    for my $DFKey ( grep{ $_ =~ m{\ADynamicField} }keys %TicketData ) {
+        $TicketData{$DFKey} = $LanguageObject->Translate( $TicketData{$DFKey} );
     }
 
     # replace config options
