@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<otrs_config version="2.0" init="Config">
+<otobo_config version="2.0" init="Config">
     <Setting Name="Frontend::Output::FilterElementPost###StdSubject" Required="0" Valid="1">
         <Description Translatable="1">Defines standard subjects for some actions.</Description>
         <Navigation>Frontend::Base::OutputFilter</Navigation>
@@ -33,4 +33,4 @@
             </Hash>
         </Value>
     </Setting>
-</otrs_config>
+</otobo_config>
