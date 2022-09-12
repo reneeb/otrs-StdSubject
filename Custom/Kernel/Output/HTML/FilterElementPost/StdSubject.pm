@@ -67,7 +67,7 @@ sub Run {
 
     my %Ticket = $TicketObject->TicketGet(
         TicketID      => $TicketID,
-	DynamicFields => 1,
+        DynamicFields => 1,
     );
 
     if ( $HasTags ) {
@@ -82,7 +82,7 @@ sub Run {
         Text           => $Translated,
         UserID         => $Self->{UserID} || $LayoutObject->{UserID},
         Ticket         => \%Ticket,
-	LanguageObject => $LanguageObject,
+        LanguageObject => $LanguageObject,
     );
 
     my $SubjectContent = $LayoutObject->Output(
